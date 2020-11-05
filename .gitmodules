@@ -1,0 +1,3 @@
+[submodule "services/serverless-app-1"]
+	path = services/serverless-app-1
+	url = git@github.com:dhollerbach/serverless-app-1.git
