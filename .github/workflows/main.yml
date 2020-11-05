@@ -10,17 +10,19 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
+
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+
+    - uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - name: serverless deploy
+        node-version: '12'
+
+    - name: Install Serverless
+      run: |
+        npm i serverless -g
+
+    - name: Serverless Deploy
       uses: serverless/github-action@master
       with:
         args: deploy
