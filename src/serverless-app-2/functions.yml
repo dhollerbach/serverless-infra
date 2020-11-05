@@ -1,6 +1,10 @@
 hello2:
   handler: src/serverless-app-2/handler.hello
-  events:
-  - http: GET hello2
   environment:
     REGION: ${self:provider.region}
+  events:
+  - eventBridge:
+      eventBus: ${self:custom.EVENT_BUS_NAME}
+      pattern:
+        source:
+          - ${self:custom.EVENT_BRIDGE_SOURCE}

@@ -1,6 +1,6 @@
 hello1:
   handler: src/serverless-app-1/handler.hello
-  events:
-  - http: GET hello1
   environment:
     REGION: ${self:provider.region}
+  events:
+  - http: GET hello1

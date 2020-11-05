@@ -5,9 +5,17 @@ provider:
   runtime: python3.7
   region: ${opt:region, 'us-east-1'}
   stage: ${opt:stage, 'dev'}
-
+  iamRoleStatements:
+      - Effect: 'Allow'
+        Action:
+          - 'events:*'
+        Resource: '*'
   environment:
     STAGE: ${self:provider.stage}
+
+custom:
+  EVENT_BRIDGE_SOURCE: test.hello
+  EVENT_BUS_NAME: default  # use 'default' for the default aws event bridge
 
 functions:
   - ${file(src/serverless-app-1/functions.yml)}
