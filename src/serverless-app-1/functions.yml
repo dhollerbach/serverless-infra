@@ -1,5 +1,5 @@
 hello1:
-  handler: handler.hello
+  handler: src/serverless-app-1/handler.hello
   events:
   - http: GET hello1
   environment:
