@@ -3,19 +3,9 @@ service: serverless-infra
 provider:
   name: aws
   runtime: python3.7
-  profile: ${opt:profile, 'dev'}
   region: ${opt:region, 'us-east-1'}
   stage: ${opt:stage, 'dev'}
 
 functions:
   - ${file(src/serverless-app-1/serverless.yml)}
   - ${file(src/serverless-app-2/serverless.yml)}
-
-# resources:
-#   Outputs:
-#     ApiGatewayRestApi:
-#       Export:
-#         Name: ApiGatewayRestApi
-#       Value:
-#         Ref: ApiGatewayRestApi
-        
