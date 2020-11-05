@@ -15,7 +15,7 @@ provider:
 
 custom:
   EVENT_BRIDGE_SOURCE: test.hello
-  EVENT_BUS_NAME: default  # use 'default' for the default aws event bridge
+  EVENT_BUS_NAME: test
 
 functions:
   - ${file(src/serverless-app-1/functions.yml)}
