@@ -1,0 +1,6 @@
+hello1:
+  handler: handler.hello
+  events:
+  - http: GET hello1
+  environment:
+    stage: ${self:provider.stage}

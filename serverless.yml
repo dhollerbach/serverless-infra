@@ -7,5 +7,5 @@ provider:
   stage: ${opt:stage, 'dev'}
 
 functions:
-  - ${file(src/serverless-app-1/serverless.yml)}
-  - ${file(src/serverless-app-2/serverless.yml)}
+  - ${file(src/serverless-app-1/functions.yml)}
+  - ${file(src/serverless-app-2/functions.yml)}
