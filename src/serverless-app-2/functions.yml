@@ -3,4 +3,4 @@ hello2:
   events:
   - http: GET hello2
   environment:
-    stage: ${self:provider.stage}
+    REGION: ${self:provider.region}

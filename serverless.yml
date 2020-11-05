@@ -6,6 +6,9 @@ provider:
   region: ${opt:region, 'us-east-1'}
   stage: ${opt:stage, 'dev'}
 
+  environment:
+    STAGE: ${self:provider.stage}
+
 functions:
   - ${file(src/serverless-app-1/functions.yml)}
   - ${file(src/serverless-app-2/functions.yml)}
