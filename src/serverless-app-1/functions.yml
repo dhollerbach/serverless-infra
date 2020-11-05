@@ -3,4 +3,4 @@ hello1:
   environment:
     REGION: ${self:provider.region}
   events:
-  - http: GET hello1
+    - http: GET hello1

@@ -6,10 +6,10 @@ provider:
   region: ${opt:region, 'us-east-1'}
   stage: ${opt:stage, 'dev'}
   iamRoleStatements:
-  - Effect: 'Allow'
-    Action:
-      - 'events:*'
-    Resource: '*'
+    - Effect: 'Allow'
+      Action:
+        - 'events:*'
+      Resource: '*'
   environment:
     STAGE: ${self:provider.stage}
 
