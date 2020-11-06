@@ -1,5 +1,5 @@
 hello1:
-  handler: src/serverless-app-1/handler.hello
+  handler: src/serverless-app-1/handler.main
   environment:
     EVENT_BRIDGE_SOURCE: ${self:custom.EVENT_BRIDGE_SOURCE}
     EVENT_BUS_NAME: ${self:custom.EVENT_BUS_NAME}

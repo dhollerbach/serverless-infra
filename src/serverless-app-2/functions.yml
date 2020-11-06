@@ -1,5 +1,5 @@
 hello2:
-  handler: src/serverless-app-2/handler.hello
+  handler: src/serverless-app-2/handler.main
   environment:
     REGION: ${self:provider.region}
   events:
