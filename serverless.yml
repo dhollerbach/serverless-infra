@@ -12,6 +12,8 @@ provider:
       Resource: '*'
   environment:
     STAGE: ${self:provider.stage}
+    EVENT_BRIDGE_SOURCE: test.hello
+    EVENT_BUS_NAME: test
 
 # plugins:
 #   - serverless-localstack
