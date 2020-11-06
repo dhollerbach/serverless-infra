@@ -13,13 +13,7 @@ provider:
   environment:
     STAGE: ${self:provider.stage}
 
-# plugins:
-#   - serverless-localstack
-
 custom:
-  # localstack:
-  #   stages:
-  #     - local
   EVENT_BRIDGE_SOURCE: test.hello
   EVENT_BUS_NAME: test
 
