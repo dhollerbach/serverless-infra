@@ -4,4 +4,6 @@ def main(event, context):
         "input": event
     }
 
+    print(body)
+
     return body
